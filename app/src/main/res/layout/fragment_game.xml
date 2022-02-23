@@ -20,15 +20,68 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnBack"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="back"
-            app:icon="@drawable/ic_baseline_arrow_back_24"
-            app:layout_constraintEnd_toEndOf="parent"
+        <TextView
+            android:id="@+id/txtNum1"
+            android:layout_width="42dp"
+            android:layout_height="56dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="44dp"
+            android:text="A"
+            android:textAlignment="center"
+            android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtTurn" />
+
+        <TextView
+            android:id="@+id/txtNum2"
+            android:layout_width="42dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginEnd="100dp"
+            android:text="B"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTurn" />
+
+        <TextView
+            android:id="@+id/txtNum3"
+            android:layout_width="42dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="44dp"
+            android:text="+"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@+id/txtNum2"
+            app:layout_constraintStart_toEndOf="@+id/txtNum1"
+            app:layout_constraintTop_toBottomOf="@+id/txtTurn" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSubmit">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Answer" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Submit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNum3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

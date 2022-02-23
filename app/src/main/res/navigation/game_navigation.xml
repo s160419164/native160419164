@@ -12,18 +12,31 @@
         tools:layout="@layout/fragment_main" >
         <action
             android:id="@+id/actionGameFragment"
-            app:destination="@id/gameFragment" />
+            app:destination="@id/gameFragment"
+            app:enterAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
         android:name="com.jitusolution.native160419164.GameFragment"
         android:label="Game Screen"
         tools:layout="@layout/fragment_game">
+        <argument
+            android:name="playerName"
+            app:argType="string" />
+        <action
+            android:id="@+id/actionResFragment"
+            app:destination="@id/resFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resFragment"
+        android:name="com.jitusolution.native160419164.ResFragment"
+        android:label="Result Screen"
+        tools:layout="@layout/fragment_res">
         <action
             android:id="@+id/actionMainFragment"
             app:destination="@id/mainFragment" />
         <argument
-            android:name="playerName"
+            android:name="score"
             app:argType="string" />
     </fragment>
 </navigation>
